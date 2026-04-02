@@ -1,4 +1,7 @@
-export function TimelineItem({ title, shortDescription, isActive, onClick }) {
+/**
+ * One clickable row in the sidebar timeline (title only). Styling reflects `isActive`.
+ */
+export function TimelineItem({ title, isActive, onClick }) {
   return (
     <button
       type="button"
@@ -6,9 +9,6 @@ export function TimelineItem({ title, shortDescription, isActive, onClick }) {
       onClick={onClick}
     >
       <span className="timeline-item__title">{title}</span>
-      {shortDescription ? (
-        <span className="timeline-item__short">{shortDescription}</span>
-      ) : null}
     </button>
   )
 }
