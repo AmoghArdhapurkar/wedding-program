@@ -45,6 +45,10 @@
   height: 100%;
 }
 
+.sidebar__timeline-scroll {
+  min-width: 0;
+}
+
 .sidebar__timeline {
   list-style: none;
   margin: 0;
@@ -266,8 +270,15 @@
 }
 
 @media (max-width: 768px) {
+  /* Column + stretch so sidebar/main span full viewport width (flex-start leaves a dead band on the right). */
   .app {
     flex-direction: column;
+    align-items: stretch;
+  }
+
+  .main-content {
+    width: 100%;
+    min-width: 0;
   }
 
   /* One short sticky strip + sideways scroll: avoids tall nested vertical scroll. */
@@ -298,39 +309,92 @@
     height: auto;
   }
 
-  .sidebar__timeline {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: stretch;
-    gap: 8px;
-    padding: 4px 2px 10px;
-    margin: 0 -2px;
+  .sidebar__timeline-scroll {
+    width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
+    margin: 0;
+    padding: 2px 0 6px;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x proximity;
     overscroll-behavior-x: contain;
     overscroll-behavior-y: auto;
     scrollbar-width: thin;
+  }
+
+  /* width: max-content only — avoid min-width: 100% or flex leaves a dead zone on the right */
+  .sidebar__timeline {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    position: relative;
+    width: max-content;
+    max-width: none;
+    margin: 0;
+    padding: 12px 0 10px;
     list-style: none;
     padding-left: 0;
   }
 
+  /* Horizontal spine — inset matches scroll padding; only as wide as the chip row */
   .sidebar__timeline::before {
-    display: none;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 16px;
+    bottom: auto;
+    width: auto;
+    height: 2px;
+    border-radius: 1px;
   }
 
   .sidebar__timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     flex: 0 0 auto;
+    gap: 10px;
     scroll-snap-align: center;
     padding: 0;
     margin: 0;
     scroll-margin-inline: 8px;
+    z-index: 1;
   }
 
+  .sidebar__timeline-item:first-child {
+    scroll-margin-inline-start: 0;
+  }
+
+  .sidebar__timeline-item:last-child {
+    scroll-margin-inline-end: 0;
+  }
+
+  /* Node on the horizontal spine */
   .sidebar__timeline-item::before {
-    display: none;
+    display: block;
+    position: static;
+    left: auto;
+    top: auto;
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    border-radius: 50%;
+    background: var(--sidebar-bg);
+    border: 2px solid var(--timeline-node);
+    box-sizing: border-box;
+    transform: none;
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--bg) 70%, transparent);
+  }
+
+  .sidebar__timeline-item--active::before {
+    background: var(--accent);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-bg);
   }
 
   .timeline-item {
@@ -344,7 +408,7 @@
     text-align: center;
     border-radius: 999px;
     border: 1px solid var(--border);
-    background: color-mix(in srgb, var(--bg) 88%, var(--sidebar-bg));
+    background: color-mix(in srgb, var(--bg) 92%, var(--sidebar-bg));
   }
 
   .timeline-item--active {
@@ -358,6 +422,7 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     overflow: hidden;
     overflow-wrap: anywhere;
     word-break: break-word;

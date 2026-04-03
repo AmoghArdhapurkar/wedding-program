@@ -34,23 +34,25 @@ export function Sidebar({ events, activeEventId, onSelectEvent }) {
     <aside className="sidebar" aria-label="Ceremony timeline">
       <nav className="sidebar__nav">
         <h2 className="sidebar__heading">Program</h2>
-        <ul className="sidebar__timeline">
-          {events.map((event) => (
-            <li
-              key={event.id}
-              id={`sidebar-event-${event.id}`}
-              className={`sidebar__timeline-item${
-                event.id === activeEventId ? ' sidebar__timeline-item--active' : ''
-              }`}
-            >
-              <TimelineItem
-                title={event.title}
-                isActive={event.id === activeEventId}
-                onClick={() => onSelectEvent(event.id)}
-              />
-            </li>
-          ))}
-        </ul>
+        <div className="sidebar__timeline-scroll">
+          <ul className="sidebar__timeline">
+            {events.map((event) => (
+              <li
+                key={event.id}
+                id={`sidebar-event-${event.id}`}
+                className={`sidebar__timeline-item${
+                  event.id === activeEventId ? ' sidebar__timeline-item--active' : ''
+                }`}
+              >
+                <TimelineItem
+                  title={event.title}
+                  isActive={event.id === activeEventId}
+                  onClick={() => onSelectEvent(event.id)}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>
     </aside>
   )
