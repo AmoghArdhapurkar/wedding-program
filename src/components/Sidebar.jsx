@@ -26,7 +26,7 @@ export function Sidebar({ events, activeEventId, onSelectEvent }) {
     el.scrollIntoView({
       behavior,
       block: 'nearest',
-      inline: 'nearest',
+      inline: 'center',
     })
   }, [activeEventId])
 
