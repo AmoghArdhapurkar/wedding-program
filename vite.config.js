@@ -5,8 +5,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig({
-  // GitHub project Pages: set VITE_BASE_PATH=/your-repo-name/ in CI (see workflow).
-  base: process.env.VITE_BASE_PATH || '/',
+export default defineConfig(({ command }) => ({
+  // `./` for production so assets resolve on GitHub Pages (`/user/repo/`) without a
+  // hard-coded repo name. `'/'` locally so the dev server matches default expectations.
+  base: command === 'serve' ? '/' : './',
   plugins: [react()],
-})
+}))
