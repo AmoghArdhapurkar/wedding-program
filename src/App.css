@@ -145,10 +145,11 @@
 }
 
 .event-section {
-  min-height: 100vh;
-  min-height: 100dvh;
+  /* ~Halfway between original full-viewport sections and compact: softer min height + padding */
+  min-height: 50vh;
+  min-height: 50dvh;
   box-sizing: border-box;
-  padding: 60px 48px 80px 56px;
+  padding: 48px 44px 60px 50px;
   border-bottom: 1px solid var(--border);
   background-color: var(--bg);
 }
@@ -160,7 +161,7 @@
 .event-section__layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(104px, 140px);
-  gap: 40px 48px;
+  gap: 34px 44px;
   align-items: center;
   max-width: 56rem;
 }
@@ -190,14 +191,14 @@
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--text-heading);
-  margin: 0 0 16px;
+  margin: 0 0 13px;
 }
 
 .event-section__lead {
   font-size: 1.125rem;
   line-height: 1.55;
   color: var(--text-muted);
-  margin: 0 0 28px;
+  margin: 0 0 21px;
 }
 
 .event-section__body {
@@ -207,7 +208,7 @@
 }
 
 .event-section__body p {
-  margin: 0 0 1em;
+  margin: 0 0 0.825em;
 }
 
 .event-section__body p:last-child {
@@ -215,7 +216,7 @@
 }
 
 .event-section__subevents {
-  margin: 40px 0 0;
+  margin: 31px 0 0;
   padding: 0;
   list-style: none;
   counter-reset: step;
@@ -224,7 +225,7 @@
 .event-section__subevent {
   counter-increment: step;
   position: relative;
-  padding: 0 0 28px 2.5rem;
+  padding: 0 0 23px 2.5rem;
   border-left: 2px solid var(--border);
   margin-left: 0.6rem;
 }
@@ -316,11 +317,12 @@
   }
 
   .event-section {
-    min-height: 100dvh;
-    padding: max(40px, env(safe-area-inset-top))
-      max(20px, env(safe-area-inset-right))
-      max(56px, env(safe-area-inset-bottom))
-      max(20px, env(safe-area-inset-left));
+    min-height: 50vh;
+    min-height: 50dvh;
+    padding: max(34px, env(safe-area-inset-top))
+      max(19px, env(safe-area-inset-right))
+      max(46px, env(safe-area-inset-bottom))
+      max(19px, env(safe-area-inset-left));
   }
 
   .event-section__title {
@@ -342,7 +344,7 @@
 
   .event-section__layout {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 24px;
     max-width: none;
   }
 

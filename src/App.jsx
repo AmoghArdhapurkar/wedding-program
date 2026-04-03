@@ -11,13 +11,14 @@ import './App.css'
 function App() {
   const [activeEventId, setActiveEventId] = useState(() => events[0]?.id ?? '')
 
-  /** Called when IntersectionObserver decides which section is “current”. */
+  /** Called when scroll position implies a different “current” section. */
   const handleActiveEventChange = useCallback((id) => {
     setActiveEventId(id)
   }, [])
 
-  /** Sidebar click: scroll the matching section into view in the main column. */
+  /** Sidebar click: set highlight immediately, then smooth-scroll (scroll events can lag or omit the final tick). */
   const handleSelectEvent = useCallback((id) => {
+    setActiveEventId(id)
     document.getElementById(id)?.scrollIntoView({
       behavior: 'smooth',
       block: 'center',
