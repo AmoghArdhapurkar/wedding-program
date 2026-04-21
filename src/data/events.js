@@ -4,182 +4,165 @@
  * Each event object:
  * - `id` — kebab-case, used as DOM id for scroll targets and observer (must be unique)
  * - `icon` — filename under `src/assets/` (resolved by `resolveEventIcon.js`)
- * - `title`, `shortDescription`, `fullDescription` — display strings
+ * - `title`, `fullDescription` — display strings
  * - `subEvents` (optional) — `{ title, description }[]` for nested steps (e.g. Saptapadi)
  */
 export const events = [
   {
-    id: 'vara-puja',
-    icon: 'react.svg',
-    title: 'Seeman/Vara Puja',
-    shortDescription: 'Insert description here',
-    fullDescription:
-      'Insert description here',
-  },
-  {
     id: 'ganesh-puja',
     icon: 'vite.svg',
     title: 'Ganesh Puja',
-    shortDescription: 'Invocation of Lord Ganesha for an auspicious beginning.',
     fullDescription:
-      'The ceremony opens with prayers to Lord Ganesha, the remover of obstacles. The priest guides the families in offering flowers, incense, and modak while chanting mantras, seeking blessings for a harmonious and joyful union.',
+      "The ceremony begins with Ganapathi Puja, invoking Lord Ganesha, the remover of obstacles (Vighnaharta), to bless the wedding and ensure the celebrations proceed with grace and joy."
+  },
+  {
+    id: 'vara-puja',
+    icon: 'react.svg',
+    title: 'Vara Puja',
+    fullDescription:
+      "The bride's family formally welcomes and honors the groom and his family, symbolizing respect, acceptance, and blessings for the couple's union.",
   },
   {
     id: 'bride-entrance',
     icon: 'react.svg',
     title: 'Bride\'s Entrance',
-    shortDescription: 'Insert description here',
     fullDescription:
-      'Insert description here',
+      "The bride makes her entrance into the wedding mandap (ceremonial canopy), accompanied by her bridesmaids, maternal uncle, and brothers.",
   },
   {
     id: 'antarapat',
     icon: 'vite.svg',
     title: 'Antarapat/Mangalashtak',
-    shortDescription: 'Insert description here',
     fullDescription:
-      'Insert description here',
+      "A white cloth called the Antarpat is held between the bride and groom, preventing them from seeing each other until the auspicious moment arrives. As the cloth is held, eight sacred verses known as Mangalashtak, a cherished Maharashtrian tradition, are chanted to bless the couple with love, prosperity, and harmony.",
   },
   {
     id: 'muhurta',
     icon: 'react.svg',
-    title: 'Sumuhurtham/Muhurtham/Jeelakara Bellam',
-    shortDescription: 'Insert description here',
+    title: 'Sumuhurtham/Jeelakara Bellam',
     fullDescription:
-      'Insert description here',
+      "Jeelakarra Bellam is a beloved Telugu tradition in which the couple places a paste of cumin and jaggery on each other's heads. This marks the most auspicious moment of the wedding and symbolizes an inseparable bond, embracing both the sweet and bitter moments that life may bring.",
   },
   {
     id: 'garland-exchange',
     icon: 'vite.svg',
     title: 'Garland Exchange',
-    shortDescription: 'Insert description here',
     fullDescription:
-      'Insert description here',
+      "The bride and groom exchange floral garlands, signifying mutual acceptance, respect, and the joyful beginning of their life together.",
   },
   {
     id: 'kanyadaan',
     icon: 'react.svg',
-    title: 'Kanyadaan/Kanyadanam',
-    shortDescription: 'Insert description here',
+    title: 'Kanyadaan',
     fullDescription:
-      'Insert description here',
+      "The bride's father offers his blessings to the union, entrusting his daughter's happiness and wellbeing to the groom. This deeply emotional ritual marks the bride's transition into a new family.",
   },
   {
     id: 'mangalya-dharanam',
     icon: 'vite.svg',
-    title: 'Mangalya Dharanam',
-    shortDescription: 'Insert description here',
+    title: 'Mangalsutra/Mangalya Dharanam',
     fullDescription:
-      'Insert description here',
+      "In one of the most sacred moments of a Hindu wedding, the groom ties the mangalsutra (a sacred necklace) around the bride's neck, signifying their lifelong union and unwavering commitment to one another.",
   },
   {
     id: 'talambralu',
     icon: 'react.svg',
     title: 'Talambralu',
-    shortDescription: 'Insert description here',
     fullDescription:
-      'Insert description here',
+      "In this joyous Telugu tradition, the bride and groom shower each other with rice mixed with turmeric, symbolizing happiness, prosperity, and blessings for their married life.",
   },
   {
     id: 'laja-home',
     icon: 'vite.svg',
     title: 'Viviana Pradhana Homam/Laja Home',
-    shortDescription: 'Insert description here',
     fullDescription:
-      'Insert description here',
+      "The couple performs a sacred fire ritual, invoking Agni, the god of fire, to witness and sanctify their marriage. Together, they offer puffed rice (lahya) into the flames, often assisted by the bride's brother, symbolizing the enduring bonds of family.",
   },
 
   {
     id: 'saptapadi',
     icon: 'react.svg',
-    title: 'Saptapadi',
-    shortDescription: 'The seven sacred steps around the holy fire.',
+    title: 'Saptapadi/Mettelu',
     fullDescription:
-      'The couple takes seven steps together around the agni kund, each step representing a vow for their life ahead—nourishment, strength, prosperity, happiness, progeny, longevity, and friendship. These vows form the heart of the Hindu marriage rite.',
+      "The couple takes seven steps together around the sacred fire, each step representing a sacred vow. Toe rings, called Mettelu or Jodvi, are placed on the bride's toes to signify her marital status.",
     subEvents: [
       {
-        title: 'First step — nourishment',
+        title: 'First Step — Nourishment',
         description:
-          'The first step is for nourishment: sharing food and sustaining each other in body and spirit.',
+          'To provide sustenance and care for each other.',
       },
       {
-        title: 'Second step — strength',
+        title: 'Second Step — Strength',
         description:
-          'The second step is for strength: supporting one another through life’s challenges.',
+          'To build physical, emotional, and spiritual strength together.',
       },
       {
-        title: 'Third step — prosperity',
+        title: 'Third Step — Prosperity',
         description:
-          'The third step is for prosperity: working together for a secure and abundant household.',
+          'To earn wealth and prosperity through honest means.',
       },
       {
-        title: 'Fourth step — happiness',
+        title: 'Fourth Step — Happiness',
         description:
-          'The fourth step is for happiness: cultivating joy, laughter, and peace in the home.',
+          'To seek knowledge, happiness, and harmony in all things.',
       },
       {
-        title: 'Fifth step — progeny',
+        title: 'Fifth Step — Progeny',
         description:
-          'The fifth step is for noble progeny: raising children with virtue and love.',
+          'To be blessed with strong and virtuous children.',
       },
       {
-        title: 'Sixth step — longevity',
+        title: 'Sixth Step — Longevity',
         description:
-          'The sixth step is for long life: wishing health and many years together.',
+          'To enjoy a long life together with patience and self-control.',
       },
       {
-        title: 'Seventh step — friendship',
+        title: 'Seventh Step — Friendship',
         description:
-          'The seventh step is for friendship and fidelity: remaining true companions for life.',
+          'To pledge lifelong loyalty and friendship, sealing their bond forever.',
       },
     ],
-  },
-  {
-    id: 'jodvi',
-    icon: 'vite.svg',
-    title: 'Mettelu/Jodvi',
-    shortDescription: 'Insert description here',
-    fullDescription:
-      'Insert description here',
   },
   {
     id: 'kaan-pilni',
     icon: 'react.svg',
     title: 'Kaan Pilni',
-    shortDescription: 'Insert description here',
     fullDescription:
-      'Insert description here',
+      "In this lighthearted Marathi tradition, the bride's brother playfully twists the groom's ear, a cheeky reminder to always support and take care of his sister.",
   },
   {
     id: 'arundhati-darshan',
     icon: 'vite.svg',
     title: 'Arundhati Darshan',
-    shortDescription: 'Insert description here',
     fullDescription:
-      'Insert description here',
+      "The groom points out the double stars Arundhati and Vashishtha in the sky to the bride. In Hindu tradition, these two stars represent the ideal couple, embodying loyalty, devotion, and mutual respect.",
   },
   {
-    id: 'zaal',
+    id: 'vungarala',
     icon: 'react.svg',
-    title: 'Zaal/Airani Daan',
-    shortDescription: 'Insert description here',
+    title: 'Vungarala Sambaram',
     fullDescription:
-      'Insert description here',
+      "A playful and spirited game from Telugu wedding tradition! This fun competition between the bride and groom symbolizes the teamwork and camaraderie needed to overcome life's obstacles together, a reminder that the journey matters just as much as the destination.",
+  },
+  {
+    id: 'zhaal',
+    icon: 'react.svg',
+    title: 'Zhaal',
+    fullDescription:
+      "As the bride prepares to join the groom's family, her own family stands behind her as a symbol of their unwavering support, entrusting the groom with the couple's happiness and future.",
   },
   {
     id: 'aasheervachanam',
     icon: 'vite.svg',
     title: 'Aasheervachanam',
-    shortDescription: 'Insert description here',
     fullDescription:
-      'Insert description here',
+      "The newlywed couple seeks blessings from the Vedic priests and elders, receiving their wisdom and good wishes for a blessed life ahead.",
   },
   {
     id: 'vidaai',
     icon: 'react.svg',
     title: 'Vidaai',
-    shortDescription: 'Insert description here',
     fullDescription:
-      'Insert description here',
+      "The final and most emotional moment of the wedding, the bride bids farewell to her parents and childhood home as she embarks on a beautiful new chapter with her husband.",
   },
 ]

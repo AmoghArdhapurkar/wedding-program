@@ -19,7 +19,6 @@ export function EventSection({ event }) {
           <h2 id={`${event.id}-heading`} className="event-section__title">
             {event.title}
           </h2>
-          <p className="event-section__lead">{event.shortDescription}</p>
           <div className="event-section__body">
             <p>{event.fullDescription}</p>
           </div>

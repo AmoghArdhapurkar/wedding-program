@@ -195,14 +195,7 @@
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--text-heading);
-  margin: 0 0 13px;
-}
-
-.event-section__lead {
-  font-size: 1.125rem;
-  line-height: 1.55;
-  color: var(--text-muted);
-  margin: 0 0 21px;
+  margin: 0 0 22px;
 }
 
 .event-section__body {
@@ -445,10 +438,6 @@
 
   .event-section__title {
     font-size: clamp(1.5rem, 6vw, 1.85rem);
-  }
-
-  .event-section__lead {
-    font-size: 1.05rem;
   }
 
   .event-section__body {
