@@ -19,14 +19,16 @@ export const events = [
   },
   {
     id: 'vara-puja',
-    icon: 'react.svg',
+    icon: 'groom.svg',
+    iconScale: 6,
     title: 'Vara Puja',
     fullDescription:
       "The bride's family formally welcomes and honors the groom and his family, symbolizing respect, acceptance, and blessings for the couple's union.",
   },
   {
     id: 'bride-entrance',
-    icon: 'react.svg',
+    icon: 'bride.svg',
+    iconScale: 6,
     title: 'Bride\'s Entrance',
     fullDescription:
       "The bride makes her entrance into the wedding mandap (ceremonial canopy), accompanied by her bridesmaids, maternal uncle, and brothers.",
@@ -40,7 +42,8 @@ export const events = [
   },
   {
     id: 'muhurta',
-    icon: 'react.svg',
+    icon: 'cumin.svg',
+    iconScale: 6,
     title: 'Sumuhurtham/Jeelakara Bellam',
     fullDescription:
       "Jeelakarra Bellam is a beloved Telugu tradition in which the couple places a paste of cumin and jaggery on each other's heads. This marks the most auspicious moment of the wedding and symbolizes an inseparable bond, embracing both the sweet and bitter moments that life may bring.",
@@ -76,6 +79,7 @@ export const events = [
   {
     id: 'laja-home',
     icon: 'flame.svg',
+    iconScale: 6,
     title: 'Viviana Pradhana Homam/Laja Home',
     fullDescription:
       "The couple performs a sacred fire ritual, invoking Agni, the god of fire, to witness and sanctify their marriage. Together, they offer puffed rice (lahya) into the flames, often assisted by the bride's brother, symbolizing the enduring bonds of family.",
