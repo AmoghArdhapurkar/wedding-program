@@ -12,7 +12,7 @@ export const events = [
   {
     id: 'ganesh-puja',
     icon: 'ganesh.svg',
-    iconScale: 8,
+    iconScale: 6,
     title: 'Ganesh Puja',
     fullDescription:
       "The ceremony begins with Ganapathi Puja, invoking Lord Ganesha, the remover of obstacles (Vighnaharta), to bless the wedding and ensure the celebrations proceed with grace and joy."
@@ -42,15 +42,16 @@ export const events = [
   },
   {
     id: 'muhurta',
-    icon: 'cumin.svg',
-    iconScale: 6,
+    icon: 'jeelakara.svg',
+    iconScale: 10,
     title: 'Sumuhurtham/Jeelakara Bellam',
     fullDescription:
       "Jeelakarra Bellam is a beloved Telugu tradition in which the couple places a paste of cumin and jaggery on each other's heads. This marks the most auspicious moment of the wedding and symbolizes an inseparable bond, embracing both the sweet and bitter moments that life may bring.",
   },
   {
     id: 'garland-exchange',
-    icon: 'vite.svg',
+    icon: 'garland.svg',
+    iconScale: 6,
     title: 'Garland Exchange',
     fullDescription:
       "The bride and groom exchange floral garlands, signifying mutual acceptance, respect, and the joyful beginning of their life together.",
@@ -64,7 +65,8 @@ export const events = [
   },
   {
     id: 'mangalya-dharanam',
-    icon: 'vite.svg',
+    icon: 'mangalsutra.svg',
+    iconScale: 6,
     title: 'Mangalsutra/Mangalya Dharanam',
     fullDescription:
       "In one of the most sacred moments of a Hindu wedding, the groom ties the mangalsutra (a sacred necklace) around the bride's neck, signifying their lifelong union and unwavering commitment to one another.",
@@ -78,7 +80,7 @@ export const events = [
   },
   {
     id: 'laja-home',
-    icon: 'flame.svg',
+    icon: 'havan.svg',
     iconScale: 6,
     title: 'Viviana Pradhana Homam/Laja Home',
     fullDescription:
@@ -87,9 +89,9 @@ export const events = [
 
   {
     id: 'saptapadi',
-    icon: 'saptapadi.svg',
+    icon: 'footsteps.svg',
     title: 'Saptapadi/Mettelu',
-    iconScale: 6,
+    iconScale: 15,
     fullDescription:
       "The couple takes seven steps together around the sacred fire, each step representing a sacred vow. Toe rings, called Mettelu or Jodvi, are placed on the bride's toes to signify her marital status.",
     subEvents: [
@@ -139,7 +141,8 @@ export const events = [
   },
   {
     id: 'arundhati-darshan',
-    icon: 'vite.svg',
+    icon: 'arundati.svg',
+    iconScale: 10,
     title: 'Arundhati Darshan',
     fullDescription:
       "The groom points out the double stars Arundhati and Vashishtha in the sky to the bride. In Hindu tradition, these two stars represent the ideal couple, embodying loyalty, devotion, and mutual respect.",
