@@ -5,12 +5,14 @@
  * - `id` — kebab-case, used as DOM id for scroll targets and observer (must be unique)
  * - `icon` — filename under `src/assets/` (resolved by `resolveEventIcon.js`)
  * - `title`, `fullDescription` — display strings
+ * - `iconScale` (optional) — multiplier for per-event icon sizing
  * - `subEvents` (optional) — `{ title, description }[]` for nested steps (e.g. Saptapadi)
  */
 export const events = [
   {
     id: 'ganesh-puja',
-    icon: 'vite.svg',
+    icon: 'ganesh.svg',
+    iconScale: 8,
     title: 'Ganesh Puja',
     fullDescription:
       "The ceremony begins with Ganapathi Puja, invoking Lord Ganesha, the remover of obstacles (Vighnaharta), to bless the wedding and ensure the celebrations proceed with grace and joy."
@@ -73,7 +75,7 @@ export const events = [
   },
   {
     id: 'laja-home',
-    icon: 'vite.svg',
+    icon: 'flame.svg',
     title: 'Viviana Pradhana Homam/Laja Home',
     fullDescription:
       "The couple performs a sacred fire ritual, invoking Agni, the god of fire, to witness and sanctify their marriage. Together, they offer puffed rice (lahya) into the flames, often assisted by the bride's brother, symbolizing the enduring bonds of family.",
@@ -81,8 +83,9 @@ export const events = [
 
   {
     id: 'saptapadi',
-    icon: 'react.svg',
+    icon: 'saptapadi.svg',
     title: 'Saptapadi/Mettelu',
+    iconScale: 6,
     fullDescription:
       "The couple takes seven steps together around the sacred fire, each step representing a sacred vow. Toe rings, called Mettelu or Jodvi, are placed on the bride's toes to signify her marital status.",
     subEvents: [

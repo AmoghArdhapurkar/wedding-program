@@ -7,7 +7,7 @@ import { resolveEventIcon } from '../data/resolveEventIcon.js'
 
 /**
  * @param {object} props
- * @param {object} props.event — one entry from `events` (id, title, icon, descriptions, subEvents…)
+ * @param {object} props.event — one entry from `events` (id, title, icon, iconScale, descriptions, subEvents…)
  */
 export function EventSection({ event }) {
   const iconSrc = resolveEventIcon(event.icon)
@@ -42,6 +42,7 @@ export function EventSection({ event }) {
             alt=""
             width={120}
             height={120}
+            style={event.iconScale ? { transform: `scale(${event.iconScale})` } : undefined}
             loading="lazy"
             decoding="async"
           />
