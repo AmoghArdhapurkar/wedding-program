@@ -60,11 +60,11 @@ export const events = [
   {
     id: 'muhurta',
     icon: 'jeelakara-cropped.svg',
-    iconScale: 2,
+    iconScale: 3,
     iconCrop: {
-      top: '20%',
+      top: '10%',
       right: '10%',
-      bottom: '30%',
+      bottom: '20%',
       left: '5%',
     },
     title: 'Sumuhurtham/Jeelakara Bellam',
@@ -73,8 +73,14 @@ export const events = [
   },
   {
     id: 'garland-exchange',
-    icon: 'garland.svg',
-    iconScale: 6,
+    icon: 'garland-cropped.svg',
+    iconScale: 2,
+    iconCrop: {
+      top: '30%',
+      right: '10%',
+      bottom: '30%',
+      left: '5%',
+    },
     title: 'Garland Exchange',
     fullDescription:
       "The bride and groom exchange floral garlands, signifying mutual acceptance, respect, and the joyful beginning of their life together.",
@@ -88,8 +94,14 @@ export const events = [
   },
   {
     id: 'mangalya-dharanam',
-    icon: 'mangalsutra.svg',
-    iconScale: 6,
+    icon: 'mangalsutra-cropped.svg',
+    iconScale: 2,
+    iconCrop: {
+      top: '0%',
+      right: '10%',
+      bottom: '0%',
+      left: '5%',
+    },
     title: 'Mangalsutra/Mangalya Dharanam',
     fullDescription:
       "In one of the most sacred moments of a Hindu wedding, the groom ties the mangalsutra (a sacred necklace) around the bride's neck, signifying their lifelong union and unwavering commitment to one another.",
@@ -103,8 +115,14 @@ export const events = [
   },
   {
     id: 'laja-home',
-    icon: 'havan.svg',
-    iconScale: 6,
+    icon: 'havan-cropped.svg',
+    iconScale: 2,
+    iconCrop: {
+      top: '0%',
+      right: '10%',
+      bottom: '0%',
+      left: '5%',
+    },
     title: 'Viviana Pradhana Homam/Laja Home',
     fullDescription:
       "The couple performs a sacred fire ritual, invoking Agni, the god of fire, to witness and sanctify their marriage. Together, they offer puffed rice (lahya) into the flames, often assisted by the bride's brother, symbolizing the enduring bonds of family.",
@@ -112,9 +130,15 @@ export const events = [
 
   {
     id: 'saptapadi',
-    icon: 'footsteps.svg',
+    icon: 'footsteps-cropped.svg',
     title: 'Saptapadi/Mettelu',
-    iconScale: 15,
+    iconScale: 2,
+    iconCrop: {
+      top: '0%',
+      right: '10%',
+      bottom: '0%',
+      left: '5%',
+    },
     fullDescription:
       "The couple takes seven steps together around the sacred fire, each step representing a sacred vow. Toe rings, called Mettelu or Jodvi, are placed on the bride's toes to signify her marital status.",
     subEvents: [
@@ -164,8 +188,14 @@ export const events = [
   },
   {
     id: 'arundhati-darshan',
-    icon: 'arundati.svg',
-    iconScale: 10,
+    icon: 'arundati-cropped.svg',
+    iconScale: 2,
+    iconCrop: {
+      top: '0%',
+      right: '0%',
+      bottom: '0%',
+      left: '0%',
+    },
     title: 'Arundhati Darshan',
     fullDescription:
       "The groom points out the double stars Arundhati and Vashishtha in the sky to the bride. In Hindu tradition, these two stars represent the ideal couple, embodying loyalty, devotion, and mutual respect.",
