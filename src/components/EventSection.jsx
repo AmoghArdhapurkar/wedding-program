@@ -11,7 +11,13 @@ import { resolveEventIcon } from '../data/resolveEventIcon.js'
  */
 export function EventSection({ event }) {
   const iconSrc = resolveEventIcon(event.icon)
-  const iconStyle = { '--icon-scale': event.iconScale ?? 1 }
+  const iconStyle = {
+    '--icon-scale': event.iconScale ?? 1,
+    '--icon-crop-top': event.iconCrop?.top ?? '18%',
+    '--icon-crop-right': event.iconCrop?.right ?? '18%',
+    '--icon-crop-bottom': event.iconCrop?.bottom ?? '18%',
+    '--icon-crop-left': event.iconCrop?.left ?? '18%',
+  }
 
   return (
     <section id={event.id} className="event-section" aria-labelledby={`${event.id}-heading`}>

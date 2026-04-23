@@ -6,29 +6,46 @@
  * - `icon` — filename under `src/assets/` (resolved by `resolveEventIcon.js`)
  * - `title`, `fullDescription` — display strings
  * - `iconScale` (optional) — multiplier for per-event icon sizing
+ * - `iconCrop` (optional) — crop percentages: `{ top, right, bottom, left }`
  * - `subEvents` (optional) — `{ title, description }[]` for nested steps (e.g. Saptapadi)
  */
 export const events = [
   {
     id: 'ganesh-puja',
-    icon: 'ganesh.svg',
-    iconScale: 6,
+    icon: 'ganesh-cropped.svg',
+    iconScale: 2,
+    iconCrop: {
+      top: '0%',
+      right: '10%',
+      bottom: '0%',
+      left: '5%',
+    },
     title: 'Ganesh Puja',
     fullDescription:
       "The ceremony begins with Ganapathi Puja, invoking Lord Ganesha, the remover of obstacles (Vighnaharta), to bless the wedding and ensure the celebrations proceed with grace and joy."
   },
   {
     id: 'vara-puja',
-    icon: 'groom.svg',
-    iconScale: 6,
+    icon: 'groom-cropped.svg',
+    iconScale: 2,
+    iconCrop: {
+      top: '5%',
+      bottom: '10%',
+    },
     title: 'Vara Puja',
     fullDescription:
       "The bride's family formally welcomes and honors the groom and his family, symbolizing respect, acceptance, and blessings for the couple's union.",
   },
   {
     id: 'bride-entrance',
-    icon: 'bride.svg',
-    iconScale: 6,
+    icon: 'bride-cropped.svg',
+    iconScale: 2,
+    iconCrop: {
+      top: '0%',
+      right: '10%',
+      bottom: '0%',
+      left: '5%',
+    },
     title: 'Bride\'s Entrance',
     fullDescription:
       "The bride makes her entrance into the wedding mandap (ceremonial canopy), accompanied by her bridesmaids, maternal uncle, and brothers.",
@@ -42,8 +59,14 @@ export const events = [
   },
   {
     id: 'muhurta',
-    icon: 'jeelakara.svg',
-    iconScale: 10,
+    icon: 'jeelakara-cropped.svg',
+    iconScale: 2,
+    iconCrop: {
+      top: '20%',
+      right: '10%',
+      bottom: '30%',
+      left: '5%',
+    },
     title: 'Sumuhurtham/Jeelakara Bellam',
     fullDescription:
       "Jeelakarra Bellam is a beloved Telugu tradition in which the couple places a paste of cumin and jaggery on each other's heads. This marks the most auspicious moment of the wedding and symbolizes an inseparable bond, embracing both the sweet and bitter moments that life may bring.",

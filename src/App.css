@@ -188,6 +188,12 @@
   max-width: 100%;
   object-fit: contain;
   opacity: 1;
+  clip-path: inset(
+    var(--icon-crop-top, 0%)
+    var(--icon-crop-right, 0%)
+    var(--icon-crop-bottom, 0%)
+    var(--icon-crop-left, 0%)
+  );
 }
 
 .event-section__title {
