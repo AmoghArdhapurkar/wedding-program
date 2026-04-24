@@ -52,7 +52,7 @@ export const events = [
   },
   {
     id: 'antarapat',
-    icon: 'kalash-cropped.svg',
+    icon: 'antarapat-cropped.svg',
     iconScale: 2,
     iconCrop: {
       top: '0%',
@@ -94,7 +94,7 @@ export const events = [
   },
   {
     id: 'kanyadaan',
-    icon: 'kalash-cropped.svg',
+    icon: 'hands-cropped.svg',
     iconScale: 2,
     iconCrop: {
       top: '0%',
@@ -122,7 +122,7 @@ export const events = [
   },
   {
     id: 'talambralu',
-    icon: 'kalash-cropped.svg',
+    icon: 'rice-cropped.svg',
     iconScale: 2,
     iconCrop: {
       top: '0%',
@@ -202,7 +202,7 @@ export const events = [
   },
   {
     id: 'kaan-pilni',
-    icon: 'kalash-cropped.svg',
+    icon: 'brother-cropped.svg',
     iconScale: 2,
     iconCrop: {
       top: '0%',
@@ -230,7 +230,7 @@ export const events = [
   },
   {
     id: 'vungarala',
-    icon: 'kalash-cropped.svg',
+    icon: 'bowl-cropped.svg',
     iconScale: 2,
     iconCrop: {
       top: '0%',
@@ -272,7 +272,7 @@ export const events = [
   },
   {
     id: 'vidaai',
-    icon: 'kalash-cropped.svg',
+    icon: 'car-cropped.svg',
     iconScale: 2,
     iconCrop: {
       top: '0%',
