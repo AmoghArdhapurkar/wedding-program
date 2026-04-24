@@ -52,7 +52,14 @@ export const events = [
   },
   {
     id: 'antarapat',
-    icon: 'vite.svg',
+    icon: 'kalash-cropped.svg',
+    iconScale: 2,
+    iconCrop: {
+      top: '0%',
+      right: '10%',
+      bottom: '0%',
+      left: '5%',
+    },
     title: 'Antarapat/Mangalashtak',
     fullDescription:
       "A white cloth called the Antarpat is held between the bride and groom, preventing them from seeing each other until the auspicious moment arrives. As the cloth is held, eight sacred verses known as Mangalashtak, a cherished Maharashtrian tradition, are chanted to bless the couple with love, prosperity, and harmony.",
@@ -78,7 +85,7 @@ export const events = [
     iconCrop: {
       top: '30%',
       right: '10%',
-      bottom: '30%',
+      bottom: '0%',
       left: '5%',
     },
     title: 'Garland Exchange',
@@ -87,7 +94,14 @@ export const events = [
   },
   {
     id: 'kanyadaan',
-    icon: 'react.svg',
+    icon: 'kalash-cropped.svg',
+    iconScale: 2,
+    iconCrop: {
+      top: '0%',
+      right: '10%',
+      bottom: '0%',
+      left: '5%',
+    },
     title: 'Kanyadaan',
     fullDescription:
       "The bride's father offers his blessings to the union, entrusting his daughter's happiness and wellbeing to the groom. This deeply emotional ritual marks the bride's transition into a new family.",
@@ -108,7 +122,14 @@ export const events = [
   },
   {
     id: 'talambralu',
-    icon: 'react.svg',
+    icon: 'kalash-cropped.svg',
+    iconScale: 2,
+    iconCrop: {
+      top: '0%',
+      right: '10%',
+      bottom: '0%',
+      left: '5%',
+    },
     title: 'Talambralu',
     fullDescription:
       "In this joyous Telugu tradition, the bride and groom shower each other with rice mixed with turmeric, symbolizing happiness, prosperity, and blessings for their married life.",
@@ -181,7 +202,14 @@ export const events = [
   },
   {
     id: 'kaan-pilni',
-    icon: 'react.svg',
+    icon: 'kalash-cropped.svg',
+    iconScale: 2,
+    iconCrop: {
+      top: '0%',
+      right: '10%',
+      bottom: '0%',
+      left: '5%',
+    },
     title: 'Kaan Pilni',
     fullDescription:
       "In this lighthearted Marathi tradition, the bride's brother playfully twists the groom's ear, a cheeky reminder to always support and take care of his sister.",
@@ -202,28 +230,56 @@ export const events = [
   },
   {
     id: 'vungarala',
-    icon: 'react.svg',
+    icon: 'kalash-cropped.svg',
+    iconScale: 2,
+    iconCrop: {
+      top: '0%',
+      right: '10%',
+      bottom: '0%',
+      left: '5%',
+    },
     title: 'Vungarala Sambaram',
     fullDescription:
       "A playful and spirited game from Telugu wedding tradition! This fun competition between the bride and groom symbolizes the teamwork and camaraderie needed to overcome life's obstacles together, a reminder that the journey matters just as much as the destination.",
   },
   {
     id: 'zhaal',
-    icon: 'react.svg',
+    icon: 'kalash-cropped.svg',
+    iconScale: 2,
+    iconCrop: {
+      top: '0%',
+      right: '10%',
+      bottom: '0%',
+      left: '5%',
+    },
     title: 'Zhaal',
     fullDescription:
       "As the bride prepares to join the groom's family, her own family stands behind her as a symbol of their unwavering support, entrusting the groom with the couple's happiness and future.",
   },
   {
     id: 'aasheervachanam',
-    icon: 'vite.svg',
+    icon: 'blessings-cropped.svg',
+    iconScale: 2,
+    iconCrop: {
+      top: '0%',
+      right: '10%',
+      bottom: '0%',
+      left: '5%',
+    },
     title: 'Aasheervachanam',
     fullDescription:
       "The newlywed couple seeks blessings from the Vedic priests and elders, receiving their wisdom and good wishes for a blessed life ahead.",
   },
   {
     id: 'vidaai',
-    icon: 'react.svg',
+    icon: 'kalash-cropped.svg',
+    iconScale: 2,
+    iconCrop: {
+      top: '0%',
+      right: '10%',
+      bottom: '0%',
+      left: '5%',
+    },
     title: 'Vidaai',
     fullDescription:
       "The final and most emotional moment of the wedding, the bride bids farewell to her parents and childhood home as she embarks on a beautiful new chapter with her husband.",
