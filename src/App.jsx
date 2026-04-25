@@ -9,7 +9,7 @@ import { MainContent } from './components/MainContent.jsx'
 import './App.css'
 
 function App() {
-  const [activeEventId, setActiveEventId] = useState(() => events[0]?.id ?? '')
+  const [activeEventId, setActiveEventId] = useState('welcome')
 
   /** Called when scroll position implies a different “current” section. */
   const handleActiveEventChange = useCallback((id) => {

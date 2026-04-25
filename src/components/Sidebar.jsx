@@ -36,6 +36,18 @@ export function Sidebar({ events, activeEventId, onSelectEvent }) {
         <h2 className="sidebar__heading">Program</h2>
         <div className="sidebar__timeline-scroll">
           <ul className="sidebar__timeline">
+            <li
+              id="sidebar-event-welcome"
+              className={`sidebar__timeline-item${
+                activeEventId === 'welcome' ? ' sidebar__timeline-item--active' : ''
+              }`}
+            >
+              <TimelineItem
+                title="Welcome"
+                isActive={activeEventId === 'welcome'}
+                onClick={() => onSelectEvent('welcome')}
+              />
+            </li>
             {events.map((event) => (
               <li
                 key={event.id}

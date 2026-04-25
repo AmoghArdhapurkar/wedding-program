@@ -1,11 +1,12 @@
 /**
- * Scrollable main column: one `EventSection` per ceremony entry.
+ * Scrollable main column: `WelcomeSection` plus one `EventSection` per ceremony entry.
  * Scrollspy: map viewport midline Y to the “current” section. Page top/bottom are
  * explicit so a short first (or last) block never loses highlight when the center
  * falls past it while scroll position is still at the start/end of the document.
  */
 import { useLayoutEffect, useRef } from 'react'
 import { EventSection } from './EventSection.jsx'
+import { WelcomeSection } from './WelcomeSection.jsx'
 
 /**
  * @param {object} props
@@ -18,8 +19,11 @@ export function MainContent({ events, onActiveEventChange }) {
   useLayoutEffect(() => {
     lastEmittedId.current = null
 
-    const sectionEls = () =>
-      events.map((e) => document.getElementById(e.id)).filter(Boolean)
+    const sectionEls = () => {
+      const welcomeEl = document.getElementById('welcome')
+      const eventEls = events.map((e) => document.getElementById(e.id)).filter(Boolean)
+      return welcomeEl ? [welcomeEl, ...eventEls] : eventEls
+    }
 
     /**
      * Assign midline to section i when lineY ∈ [topᵢ, topᵢ₊₁) so gaps belong to the
@@ -99,6 +103,7 @@ export function MainContent({ events, onActiveEventChange }) {
 
   return (
     <main className="main-content">
+      <WelcomeSection />
       {events.map((event) => (
         <EventSection key={event.id} event={event} />
       ))}

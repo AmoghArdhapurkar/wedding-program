@@ -148,6 +148,67 @@
   background-color: var(--bg);
 }
 
+.welcome-section {
+  box-sizing: border-box;
+  padding: 48px 44px 52px 50px;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--bg);
+}
+
+.welcome-section__inner {
+  max-width: 42rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.welcome-section__title {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-heading);
+  margin: 0 0 22px;
+}
+
+.welcome-section__lead {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin: 0 0 1em;
+}
+
+.welcome-section__body {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin: 0 0 1.75rem;
+}
+
+.welcome-section__photos-link {
+  display: inline-block;
+  font-family: var(--ui);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.35;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: #fff;
+  background: var(--accent);
+  text-decoration: none;
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+
+.welcome-section__photos-link:hover {
+  background: var(--secondary);
+  transform: translateY(-1px);
+}
+
+.welcome-section__photos-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .event-section {
   /* ~Halfway between original full-viewport sections and compact: softer min height + padding */
   min-height: 50vh;
@@ -440,6 +501,22 @@
       max(19px, env(safe-area-inset-right))
       max(46px, env(safe-area-inset-bottom))
       max(19px, env(safe-area-inset-left));
+  }
+
+  .welcome-section {
+    padding: max(34px, env(safe-area-inset-top))
+      max(19px, env(safe-area-inset-right))
+      max(40px, env(safe-area-inset-bottom))
+      max(19px, env(safe-area-inset-left));
+  }
+
+  .welcome-section__title {
+    font-size: clamp(1.5rem, 6vw, 1.85rem);
+  }
+
+  .welcome-section__lead,
+  .welcome-section__body {
+    font-size: 1rem;
   }
 
   .event-section__title {
